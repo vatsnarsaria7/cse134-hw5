@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Education of Vats Narsaria">
+    <title>Education - Vats Narsaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Education Background</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-switcher"></button>
+        </nav>
+    </header>
+
+    <main class="education-page">
+        <section>
+            <h2><span style="color:var(--primary-color)">University of California San Diego</span></h2>
+            <p><strong>Degree:</strong> Bachelor of Science in Computer Science</p>
+            <p><strong>Expected Graduation:</strong> June 2026</p>
+            <section>
+                <h2>Degree Progress</h2>
+                <p>Visualizing my progress in completing my Computer Science degree.</p>
+                <canvas id="degreeProgress" width="300" height="30" style="border:1px solid #000;"></canvas>
+            </section>
+
+            <script>
+                var ctx = document.getElementById("degreeProgress").getContext("2d"),
+                    progress = (8 / 12) * 280; // Junior Winter: 8/12 quarters complete
+
+                ctx.fillStyle = "#ddd"; ctx.fillRect(10, 5, 280, 20); // Background bar
+                ctx.fillStyle = "orange"; ctx.fillRect(10, 5, progress, 20); // Progress bar
+                ctx.fillStyle = "black"; ctx.font = "14px Arial";
+                ctx.fillText(Math.round((progress / 280) * 100) + "% Complete", 110, 20);
+            </script>
+            <noscript>
+                <p><strong>JavaScript is disabled in your browser.</strong> Please enable JavaScript to view the degree
+                    progress visualization.</p>
+            </noscript>
+            <p><strong>GPA:</strong> 3.80 / 4.00</p>
+        </section>
+
+        <section>
+            <h2>Coursework Overview</h2>
+            <table>
+                <caption><strong>Relevant Courses Taken at <abbr
+                            title="University of California San Diego">UCSD</abbr></strong></caption>
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Recommender Systems and Web Mining</td>
+                        <td>Explored collaborative filtering, content-based filtering, and machine learning techniques
+                            for
+                            recommendation systems.</td>
+                    </tr>
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td>Covered software development methodologies, version control, and project management.</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Data Structures</td>
+                        <td>Studied heaps, tries, segment trees, and graph algorithms with performance analysis.</td>
+                    </tr>
+                    <tr>
+                        <td>Design & Analysis of Algorithms</td>
+                        <td>Analyzed time complexity, greedy algorithms, dynamic programming, and NP-completeness.</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Organization & Systems Programming</td>
+                        <td>Covered memory management, assembly language, and low-level programming.</td>
+                    </tr>
+                    <tr>
+                        <td>Econometrics</td>
+                        <td>Applied statistical techniques to economic data analysis, regression models, and hypothesis
+                            testing.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Transcript</h2>
+            <p>For a full academic transcript, <a href="assets/transcriptFall24.pdf" target="_blank">click here</a>.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Vats Narsaria | <a href="contact.html"> Contact Me</a></p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+
+</body>
+
+</html>
