@@ -1,4 +1,4 @@
-import { getExpCardCss } from './experience-card.css.js';
+import { getExperienceCardCSS } from './experience-card-css.js';
 
 class experienceCard extends HTMLElement {
     constructor() {
@@ -9,28 +9,37 @@ class experienceCard extends HTMLElement {
     connectedCallback() {
         const style = document.createElement("style");
 
-        style.textContent = getExpCardCss();
+        style.textContent = getExperienceCardCSS();
 
-        const exp_title = getAttribute("exp-title") || "";
-        const organization = getAttribute("organization") || "";
-        const dates = getAttributes("dates") || "";
-        const responsibilites = getAttributes("responsibilites") || "";
+        const title = this.getAttribute("title") || "Untitled Experience";
+        const company = this.getAttribute("company") || "Unknown Company";
+        const dates = this.getAttribute("dates") || "No Dates Provided";
+        const description = this.getAttribute("description") || "No description available.";
+        const imgSrc = this.getAttribute("img-src") || "placeholder.jpg";
+        const imgAlt = this.getAttribute("img-alt") || `Image of ${title}`;
+        const link = this.getAttribute("link") || "#";
+        const linkText = this.getAttribute("link-text") || "Learn More";
 
         this.shadowRoot.innerHTML = `
 
         <div class="experience-card">
-            <h3>${exp_title}</h3>
-            <p>${organizaiton}</p>
-            <p>${dates}</p>
-            <dl>
-                ${responsibilities.map(res => `<dt>${res.title}</dt><dd>${res.description}</dd>`).join('')}
-            </dl>
+            <h2>${title}</h2>
+            
+            <picture>
+                <img src="${imgSrc}" alt="${imgAlt}">
+            </picture>
+
+            <p><strong>Company:</strong> ${company}</p>
+            <p><strong>Dates:</strong> ${dates}</p>
+            <p class="description">${description}</p>
+
+            <a href="${link}" target="_blank" class="learn-more">${linkText}</a>
         </div>
         `;
 
 
-        this.shadowRoom.appendChild(style);
+        this.shadowRoot.appendChild(style);
     }
 }
 
-customElements.define('experience-card', ExperienceCard);
+customElements.define('experience-card', experienceCard);

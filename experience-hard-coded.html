@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Experience of Vats Narsaria">
+    <title>Experience - Vats Narsaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="custom-component/experience-card.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>My Experiences</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-switcher"></button>
+        </nav>
+    </header>
+    <hr>
+    <main class="experience-page">
+
+        <experience-card title="Software Development Engineer Intern" company="Amazon" dates="June 2025 – Present"
+            description="Incoming Software Development Engineer Intern at Amazon. Responsibilities will be announced upon starting."
+            img-src="assets/amazon.png" img-alt="Amazon SDE Internship"
+            link="https://www.youtube.com/watch?v=BVpkY1H-0qE" link-text="About Amazon">
+        </experience-card>
+
+        <experience-card title="Research Assistant" company="ESB.AI Lab, UC San Diego" dates="September 2024 – Present"
+            description="Developed a Swift-based app for farmers to capture crop images and analyze them using ML models."
+            img-src="assets/ucsd-cseLogo.png" img-alt="Research project at ESB.AI Lab"
+            link="http://edwinsolares.com/current-research/" link-text="More about the lab">
+        </experience-card>
+
+        <experience-card title="Front-End Developer Intern" company="We Care Insurance" dates="July 2024 – October 2024"
+            description="Migrated JavaScript code to React, integrated APIs with Axios, and tested applications using Postman."
+            img-src="assets/we-care-logo.png" img-alt="Front-end development work"
+            link="https://www.wecare-insurance.com/about/" link-text="About We Care Insurance">
+        </experience-card>
+
+        <experience-card title="Field Technician" company="IT Services, UC San Diego" dates="September 2023 - Present"
+            description="Troubleshot over 1,800 workstations, managed assets, and resolved IT issues for faculty and students."
+            img-src="assets/ucsd-logo.png" img-alt="IT Field Technician work"
+            link="https://blink.ucsd.edu/technology/about/index.html" link-text="About UCSD ITS">
+        </experience-card>
+
+        <experience-card title="Instructional Assistant" company="UCSD Computer Science Department"
+            dates="September 2023 - December 2023"
+            description="Guided a class of over 500 students in mastering Python, loops, functions, and data structures. Held office hours to clarify concepts."
+            img-src="assets/cse-FA238a-tutors.png" img-alt="Teaching experience at UCSD"
+            link="https://cse.ucsd.edu/undergraduate/undergraduate-tutors" link-text="About UCSD CSE Tutors">
+        </experience-card>
+
+
+    </main>
+
+    <footer>
+        <p>Vats Narsaria | <a href="contact.html"> Contact Me</a></p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+
+</body>
+
+</html>
