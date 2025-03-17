@@ -171,13 +171,23 @@ footer {
 
 /*=============PROJECTS PAGE===============*/
 
+
+.projects-page section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 2rem;
+}
+
 .projects-page article {
     background: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: trasform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin: 1rem 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 400px;
 }
 
 .projects-page article:hover {
@@ -185,13 +195,25 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+.projects-page figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .projects-page figure img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 8px;
     object-fit: cover;
 }
 
+.projects-page figcaption {
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 5px;
+}
 
 
 
