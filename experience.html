@@ -7,6 +7,8 @@
     <meta name="description" content="Experience of Vats Narsaria">
     <title>Experience - Vats Narsaria</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="custom-component/experience-card.js"></script>
+    <script src="custom-component/experience.js" defer></script>
 </head>
 
 <body>
@@ -26,89 +28,8 @@
     </header>
     <hr>
     <main class="experience-page">
-        <section>
-            <h3>Research Assistant</h3>
-            <p><strong>Organization:</strong> ESB.AI Lab, UC San Diego</p>
-            <p><strong>Dates:</strong> September 2024 – Present</p>
-            <dl>
-                <dt>Mobile App Development</dt>
-                <dd>Designed and developed a Swift-based app for farmers to capture crop images and collect metadata.
-                </dd>
-
-                <dt>Machine Learning Integration</dt>
-                <dd>Implemented backend services to process and analyze collected data using ML models.</dd>
-            </dl>
-        </section>
-
-        <section>
-            <h3>Front-End Developer Intern</h3>
-            <p><strong>Company:</strong> We Care Insurance</p>
-            <p><strong>Dates:</strong> July 2024 – October 2024</p>
-            <dl>
-                <dt>Code Migration</dt>
-                <dd>Led migration of over 5,000 lines of <code>JavaScript</code> code to React.</dd>
-                <dd>Designed key UI components using React and <del>Bootstrap</del> <ins>Tailwind CSS</ins> for better
-                    customization.</dd>
-
-                <dt>API Integration</dt>
-                <dd>Used Axios for user authentication and real-time data handling.</dd>
-
-                <dt>Testing & Deployment</dt>
-                <dd>Tested APIs with Postman and containerized applications using Docker.</dd>
-
-                <dt>Version Control</dt>
-                <dd>Managed team workflows using Git and Bitbucket.</dd>
-            </dl>
-        </section>
-
-        <section>
-            <h3>Field Technician</h3>
-            <p><strong>Organization:</strong> IT Services, UC San Diego</p>
-            <p><strong>Dates:</strong> September 2023 - Present</p>
-            <dl>
-                <dt>Technical Support</dt>
-                <dd>Assisted faculty, staff, and students with troubleshooting over 1,800 workstations.</dd>
-
-                <dt>Asset Management</dt>
-                <dd>Used ServiceNow and Maximo to track inventory and work orders.</dd>
-            </dl>
-        </section>
-
-        <section>
-            <h3>Instructional Assistant</h3>
-            <p><strong>Organization:</strong> UCSD Computer Science Department</p>
-            <p><strong>Dates:</strong> September 2023 - December 2023</p>
-            <dl>
-                <dt>Python Tutoring</dt>
-                <dd>Guided over 500 students in mastering loops, functions, and data structures.</dd>
-
-                <dt>Student Mentorship</dt>
-                <dd>Held office hours to clarify concepts and improve student understanding.</dd>
-            </dl>
-        </section>
-
-        <section hidden>
-            <h2>Template Demo</h2>
-            <template>
-                <section>
-                    <h3>Job Title</h3>
-                    <p><strong>Company:</strong> Company Name</p>
-                    <p><strong>Dates:</strong> Start Date – End Date</p>
-                    <dl>
-                        <dt>Responsibility 1</dt>
-                        <dd>Brief description of the task or contribution.</dd>
-
-                        <dt>Responsibility 2</dt>
-                        <dd>Short explanation of another key contribution.</dd>
-
-                        <dt>Technology Used</dt>
-                        <dd>Mention relevant tools or technologies.</dd>
-                    </dl>
-                </section>
-            </template>
-        </section>
-
-
+        <button id="load-local">Load Local</button>
+        <button id="load-remote">Load Remote</button>
     </main>
 
     <footer>
