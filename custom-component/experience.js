@@ -54,8 +54,10 @@ function displayExperiences(experiences) {
 
     container.innerHTML =
         `
-            <button id="load-local">Load Local</button>
-            <button id="load-remote">Load Remote</button>
+    <div class="button-container">
+        <button id="load-local">Load Local</button>
+        <button id="load-remote">Load Remote</button>
+    </div>
         `;
 
     experiences.forEach(exp => {

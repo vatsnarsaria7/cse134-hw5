@@ -233,7 +233,37 @@ footer {
 
 
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 
+    /* Trying to adjust these values to fix issue with button stretchign */
+}
+
+/* To make sure buttons don’t stretch full width */
+.experience-page button {
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+    max-height: 100px;
+    min-width: 140px;
+
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.experience-page button:hover {
+    background-color: #0056b3;
+}
 
 @media (max-width: 768px) {
     .experience-page section {
